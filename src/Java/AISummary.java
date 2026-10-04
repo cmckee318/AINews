@@ -11,10 +11,10 @@ public class AISummary{
     private static final String HOST_URL = "http://localhost:11434";
     private static final String MODEL = "llama3.2";
     private static final String SYSTEM_PROMPT =
-                "You are a concise but detailed news summarizer. You will be given multiple sources. "
-                + "Format the summaries exactly as follows -> Title: title\nSummary: summary\nTitle: title\nSummary: summary\n..."
+                "You are a concise but detailed news summarizer."
+                + "Format the summary exactly as follows -> Title: title\nLink: link\nSummary: summary\nImportant Detail: detail "
                 + "Output no extra text or response"
-                + "summaries should be as close to a paragraph as possible and rich in detail";
+                + "summaries should a paragraph or more if needed but preferable one paragraph and rich in detail";
 
     private static final Ollama ollama = new Ollama(HOST_URL);
     private static final Options OPTIONS = new OptionsBuilder().setTemperature(0.1f).setNumCtx(32768).build();

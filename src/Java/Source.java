@@ -1,5 +1,8 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public abstract class Source{
 
-    public abstract String search(int numSites);
+    public abstract List<String> search(int numSites);
 
 }

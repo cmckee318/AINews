@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class SourcePrompt extends Source{
 
     private String prompt;
@@ -11,7 +14,7 @@ public class SourcePrompt extends Source{
     }
 
     @Override
-    public String search(int numSites){
-        return "";
+    public List<String> search(int numSites){
+        return null;
     }
 }

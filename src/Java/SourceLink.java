@@ -3,11 +3,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+
 
 public class SourceLink extends Source{
     private String linkMain;
     private String selection;
     private String name;
+    private List<String> sources = new ArrayList<>();
 
     public SourceLink(String linkMain, String selection, String name){
         this.linkMain = linkMain;
@@ -16,12 +20,11 @@ public class SourceLink extends Source{
     }
 
     @Override
-    public String search(int numSites){
-        String output = "Site: " + name + " Source number: " + numSites + "\n";
+    public List<String> search(int numSites){
 
         Document mainDoc = scraping(this.linkMain);
         if(mainDoc == null){
-            return "Error doc is null";
+            return  null;
         }
 
         Elements links = mainDoc.select(selection);
@@ -30,10 +33,11 @@ public class SourceLink extends Source{
             String link = links.get(i).absUrl("href");
             Document doc = scraping(link);
             String bodyText = doc.body().text();
-
-            output += "Link: " + i + "\nText: " + bodyText + "\n";
+            if(bodyText.length() > 1000){
+                sources.add("Link: " + link + "\nText: " + bodyText + "\n");
+            }
         }
-        return output;
+        return sources;
     }
 
     private Document scraping(String link){
