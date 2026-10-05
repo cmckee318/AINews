@@ -80,6 +80,9 @@ function createElements(articles) {
         facts.textContent = get("Important Detail");
 
         newElement.append(title, link, summary, facts);
+        newElement.addEventListener("click", function(){
+            window.open(link.href, '_blank');
+        });
         mainContain.appendChild(newElement);
     }
 }
