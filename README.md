@@ -1,6 +1,6 @@
 # AINews
 
-AINews is a small full-stack project that scrapes news articles from a few websites, summarizes each one with a locally running LLM, and displays the summaries as cards in a simple web page.
+AINews is a small full-stack project that scrapes news articles from a few websites, summarizes each one with a locally running LLM, and displays the summaries as cards in a simple web page. This is a mini project aimed at scraping and summarizing articles off the internet for larger AI based projects that need to implement web searching.
 
 ## How It Works
 
