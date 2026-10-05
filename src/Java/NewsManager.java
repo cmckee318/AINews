@@ -19,7 +19,7 @@ public class NewsManager{
         List<String> summaries = new ArrayList<>();
 
             for(Source source: sources){
-                List<String> list = source.search(4);
+                List<String> list = source.search(2);
 
                 for(String item: list){
                     summaries.add(AISummary.summarize(item));
