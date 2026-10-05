@@ -17,7 +17,7 @@ public class AISummary{
                 + "summaries should a paragraph or more if needed but preferable one paragraph and rich in detail";
 
     private static final Ollama ollama = new Ollama(HOST_URL);
-    private static final Options OPTIONS = new OptionsBuilder().setTemperature(0.1f).setNumCtx(32768).build();
+    private static final Options OPTIONS = new OptionsBuilder().setTemperature(0.1f).build();
 
 
     public static String summarize(String prompt){

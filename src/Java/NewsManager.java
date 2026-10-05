@@ -6,7 +6,7 @@ public class NewsManager{
 
     private static void populateSources(){
         Source NPR = new SourceLink("https://text.npr.org", "a.topic-title", "NPR");
-        Source THN = new SourceLink("https://thehackernews.com/", "a.story-link", "The Hacker News");
+        Source THN = new SourceLink("https://thehackernews.com", "a.story-link", "The Hacker News");
         //ADD More Here
 
         sources.add(NPR);
