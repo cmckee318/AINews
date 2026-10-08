@@ -6,7 +6,7 @@ button.addEventListener("click", function(){
         mainContain.innerHTML = "";
         createElements(articles);
    }).catch((err) => {
-        fetch('../Test/Test.txt')
+        fetch('/src/Test/Test.txt')
             .then(response => response.text())
             .then(text => {
                 mainContain.innerHTML = "";
