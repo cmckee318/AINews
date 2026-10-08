@@ -42,9 +42,8 @@ button.addEventListener("click", function(){
            "\n" +
            "Important Detail: GitGuardian's research highlights the growing threat of credential exposure, which is becoming increasingly difficult for security teams to manage. The company's analysis of systems compromised during the Shai-Hulud 2 supply-chain campaign revealed that 33,185 unique secrets were found on compromised machines, with 44% containing more than 10 secrets and 5% containing over 100. This underscores the need for security teams to develop strategies to detect, remediate, and prevent credential exposure, as well as to establish visibility into the credential layer to ensure effective coverage of their existing secrets-management programs."
        mainContain.innerHTML = "";
-       createElements(text); // Your text file content is here
-
-        console.log(err);
+       createElements(text);
+       console.log(err);
    })
 
 });
