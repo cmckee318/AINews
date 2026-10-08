@@ -69,6 +69,7 @@ body {
 }
 
 .title {
+    font-family: Georgia, "Times New Roman", serif;
     margin: 0 0 6px;
     font-size: 1.25rem;
     line-height: 1.3;

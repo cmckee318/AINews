@@ -6,8 +6,14 @@ button.addEventListener("click", function(){
         mainContain.innerHTML = "";
         createElements(articles);
    }).catch((err) => {
-       console.log(err);
-       alert(err);
+        fetch('../Test/Test.txt')
+            .then(response => response.text())
+            .then(text => {
+                mainContain.innerHTML = "";
+                createElements(text); // Your text file content is here
+            })
+            .catch(error => console.error('Error fetching the file:', error));
+        console.log(err);
    })
 
 });

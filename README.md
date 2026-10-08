@@ -10,6 +10,10 @@ AINews is a small full-stack project that scrapes news articles from a few websi
 4. Each article is sent to a local Ollama model (`llama3.2`), which returns a structured summary.
 5. The summaries are returned to the browser, parsed, and rendered as clickable cards.
 
+## GITHUB
+
+- using a test file for github viewing purposes
+
 ## Project Structure
 
 ```
